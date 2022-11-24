@@ -1,0 +1,520 @@
+/* Universal Styles */
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+.main-content {
+  position: relative;
+  top: 5.3125rem; /* To offset for fixed header. */
+}
+
+.center {
+  text-align: center;
+}
+
+.button {
+  border-radius: 4px;
+  background-color: #4a4a4a;
+  color: white;
+}
+
+.image-container {
+  overflow: hidden;
+}
+
+.image-container img {
+  display: block;
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 780px) {
+  .main-content {
+    top: 2.5625rem;
+  }
+}
+
+/* Header */
+
+header {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  border-bottom: solid 1px #c6c1c1;
+  background-color: white;
+}
+
+header .content {
+  display: flex;
+  align-items: center;
+  padding: 1.875rem;
+}
+
+header .logo {
+  flex: 1;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.5rem;
+  color: #4a4a4a;
+}
+
+header nav ul {
+  display: flex;
+  justify-items: start;
+  align-items: center;
+}
+
+nav li {
+  padding-left: 3.5rem;
+}
+
+nav a {
+  display: flex;
+  vertical-align: bottom;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #4a4a4a;
+}
+
+header .icon {
+  align-self: center;
+  width: 1.15rem;
+  padding-left: 0.75rem;
+}
+
+header .mobile,
+header .tablet {
+  display: none;
+}
+
+@media only screen and (max-width: 780px) {
+  header .desktop {
+    display: none;
+  }
+
+  header .content {
+    padding: 1.5rem;
+  }
+
+  header .tablet {
+    display: flex;
+    font-size: 0.75rem;
+  }
+
+  header .logo {
+    display: flex;
+    font-size: 1.4rem;
+  }
+
+  nav li {
+    padding-left: 1.15rem;
+  }
+
+  header .tablet .button {
+    padding: 0.1875rem 0.5rem;
+    background-color: #9dc20b;
+    line-height: 1.6;
+    color: white;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  header .desktop,
+  header .tablet {
+    display: none;
+  }
+
+  header .mobile {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 38px;
+  }
+
+  header .content {
+    padding: 0.5rem 0;
+  }
+
+  header .mobile ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  header .mobile li {
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+
+  header .mobile .button {
+    padding: 0.1875rem 0.5rem;
+    background-color: #9dc20b;
+    line-height: 1.6;
+    color: white;
+  }
+
+  nav img {
+    height: 22px;
+  }
+}
+
+/* Sign Up Section */
+
+#sign-up-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 43.5rem;
+  background-image: url("../images/banner-landingpage.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#sign-up-cta {
+  position: relative;
+  top: 10.625rem;
+  bottom: 10.625rem;
+  left: 6.25rem;
+  padding: 2rem 5rem 3.5rem 5rem;
+  border: solid 1px #979797;
+  border-radius: 4px;
+  background-color: #9dc20b;
+}
+
+#sign-up-cta .content {
+  width: 25.625rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  color: white;
+}
+
+#sign-up-cta h1 {
+  font-size: 3.125rem;
+}
+
+#sign-up-cta h2 {
+  font-size: 2.25rem;
+}
+
+#sign-up-cta span strong {
+  font-weight: bold;
+}
+
+#sign-up-cta .cursive {
+  font-family: "Damion", cursive;
+}
+
+#sign-up-cta .striking {
+  font-family: "Rubik", sans-serif;
+  padding-bottom: 0.75rem;
+}
+
+#sign-up-cta .button {
+  margin-top: 1.625rem;
+  padding: 1.25rem 7.25rem;
+}
+
+@media only screen and (max-width: 780px) {
+  #sign-up-section {
+    align-items: center;
+    justify-content: center;
+    height: 28rem;
+  }
+
+  #sign-up-cta {
+    position: static;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    border: none;
+  }
+
+  #sign-up-cta .content {
+    margin-top: 0;
+  }
+
+  #sign-up-cta .email {
+    display: none;
+  }
+
+  #sign-up-cta h1 {
+    font-size: 3.125rem;
+  }
+
+  #sign-up-cta h2 {
+    font-size: 2.25rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #sign-up-section {
+    height: 20rem;
+    background-position: right;
+  }
+
+  #sign-up-cta h1 {
+    font-size: 2.25rem;
+  }
+
+  #sign-up-cta h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Features Section */
+
+#features-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem 5% 2.875rem 5%;
+  background-color: #f3f3f3;
+}
+
+.feature {
+  flex: 1;
+  padding: 2rem;
+  margin: 0px 1.25rem;
+  background-color: white;
+}
+
+.feature .image-container {
+  width: 90%;
+  height: 65%;
+  margin: 0 auto;
+}
+
+.feature h2 {
+  margin: 2.5rem auto 0 auto;
+  padding-bottom: 0.5rem;
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #4a4a4a;
+  line-height: 1.2;
+  width: 90%;
+}
+
+.feature h3 {
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 300;
+  color: #4a4a4a;
+  width: 82%;
+  margin: auto;
+}
+
+@media only screen and (max-width: 780px) {
+  .feature h2 {
+    font-size: 1.3rem;
+    line-height: 1.3;
+    font-weight: bolder;
+    text-align: left;
+  }
+
+  .feature h3 {
+    font-size: 0.875rem;
+    line-height: 1.4;
+    text-align: left;
+  }
+
+  #features-section {
+    flex-flow: row;
+    padding: 2%;
+  }
+
+  .feature {
+    margin: 2%;
+    padding: 1.25rem 0.25rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #features-section {
+    flex-direction: column;
+
+    padding: 0;
+  }
+
+  .feature {
+    margin: 0;
+  }
+
+  .feature h2 {
+    font-size: 1.125rem;
+    text-align: center;
+    font-weight: 400;
+    line-height: 1.3;
+  }
+
+  .feature h3 {
+    text-align: center;
+    line-height: 1.4;
+    font-size: 0.875rem;
+  }
+}
+
+/* Filters Section */
+
+#filters-section {
+  padding: 4rem 0;
+  background-color: #4a4a4a;
+}
+
+#filters-section .content {
+  padding: 0 0.625rem;
+  margin-bottom: 5rem;
+}
+
+#filters-section .content h2 {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: white;
+}
+
+#filters-section .content h3 {
+  font-size: 1rem;
+  line-height: 1.4;
+  font-weight: 300;
+  color: white;
+  margin: 1rem;
+}
+
+#filters-section .images-container {
+  display: flex;
+  max-width: 100%;
+  padding: 0 1%;
+}
+
+@media only screen and (max-width: 780px) {
+  #filters-section {
+    padding: 1.5rem 0 0 0;
+  }
+
+  #filters-section .content {
+    margin-bottom: 3rem;
+  }
+
+  #filters-section .content h2 {
+    padding: 2rem;
+    font-size: 1.8rem;
+    line-height: 1.3;
+    font-weight: bold;
+  }
+
+  #filters-section .content h3 {
+    line-height: 1.4;
+  }
+
+  #filters-section .images-container {
+    padding: 0;
+  }
+
+  #filters-section .extra {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #filters-section {
+    padding: 0;
+  }
+  #filters-section .content {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  #filters-section .content h2 {
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+
+  #filters-section .content h3 {
+    margin: 0;
+  }
+}
+
+/* Quotes Section */
+
+#quotes-section {
+  background-color: #f3f3f3;
+}
+
+#quotes-section .content {
+  display: flex;
+  padding: 5rem 1rem;
+  align-items: center;
+}
+
+#quotes-section .quote {
+  padding-right: 1rem;
+  font-family: "Palatino", serif;
+  font-size: 1.875rem;
+  line-height: 1.1;
+  font-style: italic;
+  color: #4a4a4a;
+}
+
+#quotes-section .quote-citation {
+  height: 1.875rem;
+  margin-right: 1rem;
+}
+
+@media only screen and (max-width: 780px) {
+  #quotes-section .content {
+    padding: 1.875rem 2rem;
+  }
+
+  #quotes-section .quote {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    text-align: left;
+  }
+
+  #quotes-section .quote-citation {
+    display: block;
+    padding: 1rem 0;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #quotes-section .content {
+    flex-direction: column;
+  }
+  #quotes-section .quote {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+}
+
+/* Footer */
+
+footer {
+  background-color: #9b9b9b;
+  padding: 1.5rem 2rem;
+}
+
+footer .content {
+  color: white;
+  display: flex;
+  font-size: 0.75rem;
+}
+
+footer .copyright {
+  flex-grow: 1;
+}
+
+@media only screen and (min-width: 780px) {
+  footer .content {
+    font-size: 0.625rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  footer .content {
+    font-size: 0.625rem;
+  }
+}
